@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Script Programming - Practice 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add Google fonts reference -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body id="practice1">
+    <header class="header-space">
+    <img src="images/logo-javaScripts.png" alt="JavaScripts Logo" width="70" id="logo">
+    <h1>The Art of Script Programming</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li><br>
+            </ul>
+            <br>
+            <ul>
+                <li>Labs</li>
+                <li><a href="lab1.html">Lab 1</a></li>
+                <li><a href="lab2.html">Lab 2</a></li>
+                <li><a href="lab3.html">Lab 3</a></li>
+                <li><a href="lab4.html">Lab 4</a></li>
+            </ul>
+            <br>
+            <ul>
+                <li>Exercises</li>
+                <li><a href="practice1.html" style="color: #3b2df6;">* Practice 1</a></li>
+                <li><a href="practice2.html">Practice 2</a></li>
+            </ul>
+        </nav>
+        <main >
+            <h2>Race case</h2>
+            <p>Your tasks are broken up for you so you can plan your approach and gauge 
+                what each aspect of functionality is worth. </p>           
+            <h3>PART A: Validation</h3>
+            <p>In this part of the challenge, you are tasked with validating the 
+                registrant's age and name. We will keep the validation simple for this 
+                assessment. The rules are as follows: </p>
+            <ul>
+                <li>The name cannot be an empty string</li>
+                <li>Age is required (it cannot be empty), it cannot be non-numeric, 
+                    and it cannot be less than 21.</li>
+            </ul>
+            <p>Your validation logic should be handled by a separate function from the 
+                registration button's click event. Provide one custom error message per
+                 input. You can output confirmations simply in an alert, or for more marks,
+                  you can output the results to the document (you will need to add to the 
+                  HTML for the later method). </p>
+            <h3>PART B: Processing the Registration Costs</h3>
+            <p>Only output the registration cost if you receive valid name and age input.</p>
+            <p>There are formulas that you will need to apply to determine the registration cost. 
+                Here is the logic: </p>      
+            <ul>
+                <li>5KM race: 10 + (age/2)</li>
+                <li>10KM race: 18 + (age/3)</li>
+            </ul>
+            <p>One added detail is this: if the user is a race club member, s/he gets a 
+                $5.00 discount.</p> 
+            <p>Output the final registration cost to the user in an alert using the 
+                following message format: "Name. your registration cost for the 5KM race is $" </p>
+            <hr>
+            <form class="center">
+                <label for="txtName">Name:</label>
+                <input type="text" id="txtName" size="20">        
+
+                <label for="txtAge">Age:</label>
+                <input type="text" id="txtAge" size="2">
+
+                <label for="cboRace">Race:</label>
+                <select id="cboRace">
+                    <option value="5KM">5KM</option>
+                    <option value="10KM">10KM</option>
+                </select>
+
+                <input id="chkIsMember" type="checkbox" checked>
+                <label for="chkIsMember">I am a race club member</label>
+                <button type="button" id="btnReg">Register</button>
+                <br>
+                <p id="msgError"></p>
+                <p id="results"></p>
+            </form>
+            <br>
+        </main>
+    </div>
+    <footer>
+        <p>Developeer Labs by Juan Lugo, JavaScripts </p>
+    </footer>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Script Programming - Practice 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add Google fonts reference -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body id="practice1">
+    <header class="header-space">
+    <img src="images/logo-javaScripts.png" alt="JavaScripts Logo" width="70" id="logo">
+    <h1>The Art of Script Programming</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li><br>
+            </ul>
+            <br>
+            <ul>
+                <li>Labs</li>
+                <li><a href="lab1.html">Lab 1</a></li>
+                <li><a href="lab2.html">Lab 2</a></li>
+                <li><a href="lab3.html">Lab 3</a></li>
+                <li><a href="lab4.html">Lab 4</a></li>
+            </ul>
+            <br>
+            <ul>
+                <li>Exercises</li>
+                <li><a href="practice1.html">Practice 1</a></li>
+                <li><a href="practice2.html" style="color: #3b2df6;">* Practice 2</a></li>
+            </ul>
+        </nav>
+        <main >
+            <h2>Golf case</h2>
+            <p>in golfing each hole has what is called a par meaning how many strokes it 
+                should take to get the golf ball in the hole; therefore, if a hole is a 
+                par 3. and the golfer took 3 strokes to get the ball into the hole, 
+                s/he par. If s/he took more or less strokes to get the ball into the hole,
+                 a different rating is applied, as follows (we've added one fun rating at
+                  the end for bad or very drunk golfers'):  </p>
+            <table border="1">
+                <tr>
+                    <th>Rating</th>
+                    <th>Difference from Par</th>
+                </tr>
+                <tr>
+                    <td>Eagle</td>
+                    <td>2 strokes less than par</td>
+                </tr>
+                <tr>
+                    <td>Birdie</td>
+                    <td>1 stroke less than par </td>
+                </tr>
+                <tr>
+                    <td>Par</td>
+                    <td>Same number of strokes as par </td>
+                </tr>
+                <tr>
+                    <td>Bogie</td>
+                    <td>1 stroke more than par </td>
+                </tr>
+                <tr>
+                    <td>Take some Golf Lessons</td>
+                    <td>2 or more strokes over par </td>
+                </tr>
+            </table>           
+            <h3>Specifications:</h3>
+            <p>Your program should determine the rating that the user achieved for that 
+                hole and output it in an alert. Only the rating if the user gave you a 
+                valid score, which is a number between 1 and 10, anything outside of that
+                 range should generate an error message. You do not have to validate the
+                  par number </p>
+            
+            <hr>
+            <form class="center">
+                <p>
+                <label>What is the par for the hole:</label>
+                <select id="cboPar">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                </p>
+
+                <label>Enter your score:</label>
+                <input type="text" id="txtScore" size="2">
+                <button type="button" id="btnScore">Get Score</button>
+                <br>
+                <p id="msgError"></p>
+                <p id="results"></p>
+            </form>
+            <br>
+        </main>
+    </div>
+    <footer>
+        <p>Developeer Labs by Juan Lugo, JavaScripts </p>
+    </footer>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

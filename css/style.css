@@ -1,0 +1,154 @@
+/***Add fonts****/
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@font-face {
+    font-family: 'markerregular';
+    src: url('../fonts/permanentmarker-regular-webfont.woff2') format('woff2'),
+         url('../fonts/permanentmarker-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+	background-color: #D9B036;
+	color: #3C038C;
+	font-family: 'Courier New', Courier, monospace,sans-serif;
+	margin: 5px;
+}
+
+
+h1 {
+	color: #D9B036;	
+	margin: 0;
+}
+
+h2{
+	text-align: center;
+}
+
+header{
+	background-color: #0D0D0D;
+	margin-bottom: 5px;
+}
+
+
+hr{
+	border: none;
+	height: 4px;
+	background-color: #3C038C;	
+}
+
+footer {
+	background-color: #0D0D0D;
+	color: #D9B036;
+	margin-top: 5px;	
+}
+
+footer p{
+	margin: 0;
+	text-align: center;
+}
+
+form {
+	border: 2px solid ;
+	border-color: #3C038C;
+	width: fit-content;
+	padding: 15px;
+	text-align: center;
+	margin: auto;
+}
+
+form li, button{
+	text-align: left;
+	list-style-type: none;
+}
+
+
+
+main{
+	margin: 5px;
+	width: 90%;
+}
+
+nav {
+	width: 10%;
+	background-color: #0D0D0D;
+}
+
+nav ul{
+	list-style-type: none;
+	font-family: markerregular,serif;
+}
+
+nav a{
+	color: #D9B036;	
+	text-decoration: none;
+	
+}
+
+nav a:hover {
+	color: #3b2df6;
+	text-decoration:underline;
+}
+
+button {
+	background-color: #0D0D0D;
+	color: #D9B036;
+}
+
+input[type="text"],input[type="number"]{
+	background-color: #FFDA3E;
+	color: #3C038C;
+}
+
+header, nav, main, footer {display: block;}
+
+table {
+	margin: auto;
+}
+
+/*#wrapper {
+  }*/
+
+  /*****************************
+  *             Id             *
+  ******************************/
+
+#logo{
+	margin: 5px 15px;
+}
+
+#msgError{
+	color: red;
+	text-align: left;
+	font-weight: bold;
+}
+
+#results{
+	color: #3C038C;
+	text-align: center;
+}
+
+
+  /******************************
+Classes - Add Classes for fonts
+ *******************************/
+.header-space{
+	align-items: center;      /* Centra verticalmente el H1 respecto a la imagen */
+	display: flex;            /* Coloca los elementos uno al lado del otro */
+	font-family: markerregular,serif;
+  	gap: 25px; 
+	justify-content: center;    /*  Centrado horizontal del conjunto */ 
+	text-align: center;
+}
+
+.center{
+	text-align: center;
+}
+
+.container{
+	display: flex; /*Activa Flexbox*/
+}
+
