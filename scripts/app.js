@@ -161,6 +161,8 @@ function practice2(){
         let parHole = parseInt(document.getElementById("cboPar").value);
         let score = parseInt(document.getElementById("txtScore").value);
         let error = "";
+        document.getElementById("msgError").innerHTML = "":
+        document.getElementById("results").innerHTML = "":
         error = chkScoreValue(score);
         ( error != "")? 
             document.getElementById("msgError").innerHTML = chkScoreValue(score) : 
