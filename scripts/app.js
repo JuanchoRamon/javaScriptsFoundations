@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", () =>{
         case "practice1":
             practice1();
             break;
+        case "practice2":
+            practice2();
+            break;
     }    
 });
 
@@ -151,4 +154,51 @@ function raceTarif(race,age,name){
     for example what happend if a var is empty like:  if(var =""){do this};
 
 */
- 
+
+/******* Practice2 Page Functions *******/
+function practice2(){
+    document.getElementById("btnScore").addEventListener("click",()=>{
+        let parHole = parseInt(document.getElementById("cboPar").value);
+        let score = parseInt(document.getElementById("txtScore").value);
+        let error = "";
+        error = chkScoreValue(score);
+        ( error != "")? 
+            document.getElementById("msgError").innerHTML = chkScoreValue(score) : 
+            document.getElementById("results").innerHTML = rating(parHole,score);         
+    });
+}
+
+function chkScoreValue(score){
+    let msgError ="";
+        if(isNaN(score)==true){
+            msgError='type a numeric score between 1- 10'
+        }
+        if(score < 1 || score > 10){
+            msgError='Score must be between 1 to 10'
+        }
+    return msgError;
+}
+
+function rating(par,score){
+    let rate = "";
+    let diffRating = score - par;
+    alert(diffRating);
+    switch(diffRating){
+        case 2:
+            rate = `${diffRating} strokes less than par mean your rating is Eagle`;
+            break;
+        case 1:
+            rate = `${diffRating} stroke less than par mean your rating is Birdie`;
+            break;
+        case 0:
+            rate = `Same number of strokes as a par mean your rating is a par`;
+            break;
+        case -1:
+            rate = `${diffRating} strokes more than par mean your rating is Bogie`;
+            break;
+        case (diffRating <= -2):
+            rate = `${diffRating} strokes less than par mean you ned to take some Golf Lessons`;
+            break;
+    }
+    return rate;
+}
