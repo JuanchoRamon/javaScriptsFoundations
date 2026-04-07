@@ -161,6 +161,9 @@ function practice2(){
         let parHole = parseInt(document.getElementById("cboPar").value);
         let score = parseInt(document.getElementById("txtScore").value);
         let error = "";
+        document.getElementById("msgError").innerHTML = ""; 
+        document.getElementById("results").innerHTML =  "";         
+
         error = chkScoreValue(score);
         ( error != "")? 
             document.getElementById("msgError").innerHTML = chkScoreValue(score) : 
@@ -181,23 +184,23 @@ function chkScoreValue(score){
 
 function rating(par,score){
     let rate = "";
-    let diffRating = score - par;
-    alert(diffRating);
+    let diffRating = parseInt(score - par);
+    alert(typeof(diffRating));
     switch(diffRating){
-        case 2:
-            rate = `${diffRating} strokes less than par mean your rating is Eagle`;
+        case -2:
+            rate = `${abs(diffRating)} strokes less than par mean your rating is Eagle`;
             break;
-        case 1:
-            rate = `${diffRating} stroke less than par mean your rating is Birdie`;
+        case -1:
+            rate = `${abs(diffRating)} stroke less than par mean your rating is Birdie`;
             break;
         case 0:
             rate = `Same number of strokes as a par mean your rating is a par`;
             break;
-        case -1:
-            rate = `${diffRating} strokes more than par mean your rating is Bogie`;
+        case 1:
+            rate = `${abs(diffRating)} strokes more than par mean your rating is Bogie`;
             break;
-        case (diffRating <= -2):
-            rate = `${diffRating} strokes less than par mean you ned to take some Golf Lessons`;
+        case(diffRating >= 2):
+            rate = `${abs(diffRating)} strokes more than par mean you ned to take some Golf Lessons`;
             break;
     }
     return rate;
