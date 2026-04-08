@@ -73,12 +73,13 @@ function checkNumGuestField(guessNumber,rangeState){
         error = 1
     }else{
         if(guessNumber == ""){
-            alert('Please type a value into the range that you choose ')
+            alert(`Please type a value into the range between 1 to ${rangeState.value}`)
             error = 1
 
         }else{
             if(guessNumber > parseInt(rangeState.value)){
-                alert(`your guess is out of the rage you selected, change range or your guess, and try it again.`)
+                alert(`your guess is out of the rage, change range or make a guess between
+                     1 to ${rangeState.value}, and try it again.`)
                 error = 1
             }
         }
@@ -162,8 +163,7 @@ function practice2(){
         let score = parseInt(document.getElementById("txtScore").value);
         let error = "";
         document.getElementById("msgError").innerHTML = ""; 
-        document.getElementById("results").innerHTML =  "";         
-
+        document.getElementById("results").innerHTML =  "";        
         error = chkScoreValue(score);
         ( error != "")? 
             document.getElementById("msgError").innerHTML = chkScoreValue(score) : 
@@ -184,23 +184,22 @@ function chkScoreValue(score){
 
 function rating(par,score){
     let rate = "";
-    let diffRating = parseInt(score - par);
-    alert(typeof(diffRating));
-    switch(diffRating){
-        case -2:
-            rate = `${abs(diffRating)} strokes less than par mean your rating is Eagle`;
+    let diffRating = score - par;
+    switch(true){
+        case (diffRating <= -2):
+            rate = `2 strokes or less than par mean your rating is Eagle`;
             break;
-        case -1:
-            rate = `${abs(diffRating)} stroke less than par mean your rating is Birdie`;
+        case (diffRating == -1):
+            rate = `1 stroke less than par mean your rating is Birdie`;
             break;
-        case 0:
+        case (diffRating == 0):
             rate = `Same number of strokes as a par mean your rating is a par`;
             break;
-        case 1:
-            rate = `${abs(diffRating)} strokes more than par mean your rating is Bogie`;
+        case (diffRating == 1):
+            rate = `1 stroke more than par mean your rating is Bogie`;
             break;
-        case(diffRating >= 2):
-            rate = `${abs(diffRating)} strokes more than par mean you ned to take some Golf Lessons`;
+        case (diffRating >= 2):
+            rate = `2 strokes o more than par mean you ned to take some Golf Lessons`;
             break;
     }
     return rate;
