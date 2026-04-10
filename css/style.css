@@ -12,15 +12,15 @@
 
 
 body {
-	background-color: #D9B036;
-	color: #3C038C;
+	background-color: #46518C;
+	color: #D9D9D9;
 	font-family: 'Courier New', Courier, monospace,sans-serif;
 	margin: 5px;
 }
 
 
 h1 {
-	color: #D9B036;	
+	color: #FFDA3E;	
 	margin: 0;
 }
 
@@ -29,7 +29,7 @@ h2{
 }
 
 header{
-	background-color: #0D0D0D;
+	background-color: #1B2440;
 	margin-bottom: 5px;
 }
 
@@ -37,12 +37,12 @@ header{
 hr{
 	border: none;
 	height: 4px;
-	background-color: #3C038C;	
+	background-color: #D9D9D9;	
 }
 
 footer {
-	background-color: #0D0D0D;
-	color: #D9B036;
+	background-color: #1B2440;
+	color: #6D7E8C;
 	margin-top: 5px;	
 }
 
@@ -53,7 +53,7 @@ footer p{
 
 form {
 	border: 2px solid ;
-	border-color: #3C038C;
+	border-color: #D9D9D9;
 	width: fit-content;
 	padding: 15px;
 	text-align: center;
@@ -74,7 +74,7 @@ main{
 
 nav {
 	width: 10%;
-	background-color: #0D0D0D;
+	background-color: #1B2440;
 }
 
 nav ul{
@@ -83,24 +83,24 @@ nav ul{
 }
 
 nav a{
-	color: #D9B036;	
+	color: #FFDA3E;	
 	text-decoration: none;
 	
 }
 
 nav a:hover {
-	color: #3b2df6;
+	color: #D9D9D9;
 	text-decoration:underline;
 }
 
 button {
-	background-color: #0D0D0D;
-	color: #D9B036;
+	background-color: #1B2440;
+	color: #6D7E8C;
 }
 
 input[type="text"],input[type="number"]{
-	background-color: #FFDA3E;
-	color: #3C038C;
+	background-color: #D9D9D9;
+	color: #D9D9D9;
 }
 
 header, nav, main, footer {display: block;}
@@ -127,7 +127,7 @@ table {
 }
 
 #results{
-	color: #3C038C;
+	color: #D9D9D9;
 	text-align: center;
 }
 
