@@ -207,3 +207,45 @@ function rating(par, score) {
   }
   return rate;
 }
+
+
+/******* Practice3 Page Functions *******/
+
+function practice3() {
+  document.getElementById("btnOrder").addEventListener("click",()=>{
+    let itemsSelected = document.querySelectorAll("#cboItems > option:checked");
+    let error="";
+    document.getElementById("msgError").innerHTML = "";
+    document.getElementById("results").innerHTML = "";
+    error = schItemsSelected(itemsSelected.length);
+    (error != "")? document.getElementById("msgError").innerHTML = error : document.getElementById("results").innerHTML = processOrder(itemsSelected);
+  })
+}
+
+function schItemsSelected(items){
+  if(items == 0){
+    return("Select at least one item");
+  } else{
+    return("");
+  }
+}
+
+function processOrder(items){
+  let total = 0;
+  let desc = 0;
+  let order ="The total order is "
+  for(let i of items){
+    total += parseFloat(i.value);
+  }
+  if(items.length == 4){
+    desc = (total*0.2);
+    console.log(desc)
+    order += `$ ${total.toFixed(2)} and a discount of 20% ($${desc.toFixed(2)}). the total pay is ${total-desc}.`
+  }
+  if(items.length == 3){
+    desc = (total*0.15);
+    order += `$ ${total.toFixed(2)} and a discount of 15% ($${desc.toFixed(2)}). the total pay is ${total-desc}.`
+  }
+  order += `$${total}.`;
+  return order;
+}

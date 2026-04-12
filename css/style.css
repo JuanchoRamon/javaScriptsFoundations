@@ -9,6 +9,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'grapeNuts';
+    src: url('../fonts/GrapeNuts-Regular.woff2') format('woff2'),
+        url('../fonts/GrapeNuts-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 body {
@@ -69,17 +77,22 @@ form li, button{
 
 main{
 	margin: 5px;
-	width: 90%;
+	width: 85%;
+    font-family: 'grapeNuts';
+	font-weight: bolder;
+	font-size:larger;
 }
 
 nav {
-	width: 10%;
+	width: 15%;
 	background-color: #1B2440;
 }
 
 nav ul{
 	list-style-type: none;
 	font-family: markerregular,serif;
+	font-weight: bold;
+	font-size: larger;
 }
 
 nav a{
