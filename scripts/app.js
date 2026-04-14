@@ -231,21 +231,28 @@ function schItemsSelected(items){
 }
 
 function processOrder(items){
-  let total = 0;
+  let subTotal = 0;
   let desc = 0;
+  let total = 0;
   let order ="The total order is "
   for(let i of items){
-    total += parseFloat(i.value);
+    subTotal += parseFloat(i.value);
   }
   if(items.length == 4){
-    desc = (total*0.2);
-    console.log(desc)
-    order += `$ ${total.toFixed(2)} and a discount of 20% ($${desc.toFixed(2)}). the total pay is ${total-desc}.`
+    desc = .2;
   }
   if(items.length == 3){
-    desc = (total*0.15);
-    order += `$ ${total.toFixed(2)} and a discount of 15% ($${desc.toFixed(2)}). the total pay is ${total-desc}.`
+    desc = .15;
   }
-  order += `$${total}.`;
+    desc = parseFloat(subTotal*desc);
+    total = parseFloat(subTotal-desc); 
+    order += `$${subTotal.toFixed(2)} and a discount of $${desc.toFixed(2)}. the total pay is ${total.toFixed(2)}.`
   return order;
 }
+
+/* Things to improve in the Practice 1 exercise code and from now on.
+
+    - use comments every time to explain what are tyou trying to do into the code.
+    - recall that .toFixed() function coverft to string.
+
+*/
